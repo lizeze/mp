@@ -5,10 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.github.xiami0725</groupId>
-    <artifactId>mp</artifactId>
-    <version>1.0.0</version>
-
+    <artifactId>tool</artifactId>
+    <version>1.0.1</version>
+    <name>tool</name>
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
@@ -86,21 +87,21 @@
     <licenses>
         <license>
             <name>MIT License</name>
-            <url>https://github.com/codeinghelper/basic/blob/master/LICENSE</url>
+            <url>https://github.com/xiami0725/basic/mp/master/LICENSE</url>
             <distribution>repo,manual</distribution>
         </license>
     </licenses>
     <developers>
         <developer>
-            <name>lizeze</name>
+            <name>frank</name>
             <email>franklzz@foxmail.com</email>
-            <url>https://github.com/lizeze</url>
+            <url>https://github.com/xiami0725</url>
         </developer>
     </developers>
     <scm>
-        <connection>scm:git:https://github.com/codeinghelper/basic.git</connection>
-        <developerConnection>scm:git:https://github.com/codeinghelper/basic.git</developerConnection>
-        <url>https://github.com/codeinghelper/basic</url>
+        <connection>scm:git:https://github.com/xiami0725/basic.git</connection>
+        <developerConnection>scm:git:https://github.com/xiami0725/basic.git</developerConnection>
+        <url>https://github.com/xiami0725/basic</url>
         <tag>0.0.1</tag>
     </scm>
 </project>
