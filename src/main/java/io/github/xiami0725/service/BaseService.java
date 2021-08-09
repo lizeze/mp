@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import io.github.xiami0725.request.SearchModel;
+import io.github.xiami0725.vo.PageVo;
 
 import java.io.Serializable;
 import java.util.Collection;
@@ -163,11 +164,7 @@ public interface BaseService<T> {
      */
     T selectOne(Wrapper<T> queryWrapper);
 
-    /**
-     * 获取getQueryWarpper
-     *
-     * @return
-     */
-    QueryWrapper<T> getQueryWrapper();
+
+    PageVo page(SearchModel<T> searchModel, Class object) throws InstantiationException, IllegalAccessException;
 
 }

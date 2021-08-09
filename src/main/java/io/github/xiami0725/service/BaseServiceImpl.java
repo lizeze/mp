@@ -1,15 +1,18 @@
 package io.github.xiami0725.service;
 
+import cn.hutool.core.bean.BeanUtil;
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import io.github.xiami0725.request.SearchModel;
+import io.github.xiami0725.vo.PageVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.io.Serializable;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
@@ -20,7 +23,6 @@ import java.util.Map;
 public class BaseServiceImpl<M extends BaseMapper<T>, T> implements BaseService<T> {
     @Autowired
     protected M baseMapper;
-
 
 
     @Override
@@ -140,9 +142,14 @@ public class BaseServiceImpl<M extends BaseMapper<T>, T> implements BaseService<
 
 
     @Override
-    public QueryWrapper<T> getQueryWrapper() {
-        return null;
-    }
+    public PageVo page(SearchModel<T> searchModel, Class object) throws InstantiationException, IllegalAccessException {
+        IPage<T> page = baseMapper.selectPage(searchModel.getPage(), searchModel.getQueryModel());
 
+        PageVo pageVo = new PageVo();
+        pageVo.setRecords(BeanUtil.copyToList(page.getRecords(), object));
+        pageVo.setTotal(page.getTotal());
+
+        return pageVo;
+    }
 
 }
