@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.github.xiami0725</groupId>
-    <artifactId>tool</artifactId>
-    <version>1.0.1</version>
-    <name>tool</name>
+    <artifactId>mptool</artifactId>
+    <version>1.0.0</version>
+    <name>mptool</name>
     <url>https://github.com/xiami0725/mp</url>
     <description>mp工具</description>
     <properties>
@@ -15,6 +15,14 @@
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
+    <dependencies>
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>3.4.2</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
     <distributionManagement>
         <snapshotRepository>
             <id>ossrh</id>
@@ -101,9 +109,9 @@
         </developer>
     </developers>
     <scm>
-        <connection>scm:git:https://github.com/xiami0725/basic.git</connection>
-        <developerConnection>scm:git:https://github.com/xiami0725/basic.git</developerConnection>
-        <url>https://github.com/xiami0725/basic</url>
+        <connection>scm:git:https://github.com/xiami0725/mp.git</connection>
+        <developerConnection>scm:git:https://github.com/xiami0725/mp.git</developerConnection>
+        <url>https://github.com/xiami0725/mp</url>
         <tag>0.0.1</tag>
     </scm>
 </project>
