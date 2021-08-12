@@ -57,7 +57,7 @@ public class BaseServiceImpl<M extends BaseMapper<T>, T> implements BaseService<
     public boolean saveOrUpdate(T entity, Wrapper<T> updateWrapper) {
 
 
-        return false;
+        return this.baseMapper.update(entity, updateWrapper) > 0;
     }
 
     @Transactional(rollbackFor = RuntimeException.class)
